@@ -2,11 +2,10 @@
 using System.Drawing;
 using System.Net.Sockets;
 using System.Windows.Forms;
-using Timer = System.Windows.Forms.Timer;
 
 namespace Client {
     public partial class MainForm : Form{
-        public static Timer ServerTimer = new Timer(); //keep the server's time locally instead of sending an 8 byte serialized DateTime object with each message
+        //keep the server's time locally instead of sending an 8 byte serialized DateTime object with each message
         public Socket ServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         public MainForm(){
             FormBorderStyle = FormBorderStyle.FixedSingle;
