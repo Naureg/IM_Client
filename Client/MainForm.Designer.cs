@@ -74,4 +74,3 @@ namespace Client {
         private TextBox MessageSendBox;
     }
 }
-
